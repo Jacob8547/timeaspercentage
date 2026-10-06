@@ -1,0 +1,17 @@
+{
+	"geode": "5.10.1",
+	"gd": {
+		"win": "2.2081",
+		"android": "2.2081",
+		"mac": "2.2081",
+		"ios": "2.2081"
+	},
+	"id": "jacob375.timeaspercentage",
+	"name": "Time As Percentage",
+	"version": "v1.0.0",
+	"developer": "Jacob375",
+	"description": "Displays attempt playtime v.s. total completion time.",
+	"dependencies": {
+		"geode.node-ids": ">=v1.23.3"
+	}
+}
