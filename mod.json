@@ -8,7 +8,7 @@
 	},
 	"id": "jacob375.timeaspercentage",
 	"name": "Time As Percentage",
-	"version": "v1.0.1",
+	"version": "v1.0.2",
 	"developer": "Jacob375",
 	"description": "Displays attempt playtime v.s. total completion time.",
 	"dependencies": {

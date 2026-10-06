@@ -41,13 +41,11 @@ class $modify(TimeProgressPlayLayer, PlayLayer) {
             label->setScale(percent->getScale() * 0.6f);
             label->setAnchorPoint(percent->getAnchorPoint());
             label->setPosition(percent->getPosition() - ccp(0.f, 14.f));
-            percent->getParent()->addChild(label, percent->getZOrder());
         } else {
             // Failsafe for if player's have percentage disabled (I think)
             auto winSize = CCDirector::get()->getWinSize();
             label->setScale(0.35f);
             label->setPosition({ winSize.width / 2.f, winSize.height - 22.f });
-            this->addChild(label, 100);
         }
 
         parent->addChild(label, 100);
