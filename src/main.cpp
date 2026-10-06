@@ -17,6 +17,7 @@ class $modify(TimeProgressPlayLayer, PlayLayer) {
         float totalTime = -1.f;
     };
 
+    // Run when level has fully loaded
     void setupHasCompleted() {
         PlayLayer::setupHasCompleted();
 
@@ -32,6 +33,9 @@ class $modify(TimeProgressPlayLayer, PlayLayer) {
             this->getChildByIDRecursive("percentage-label")
         );
 
+        CCNode* parent = this->getChildByType<UILayer>(0);
+        if (!parent) parent = this;
+
         if (percent && percent->getParent()) {
             // Add time label underneath percentage label
             label->setScale(percent->getScale() * 0.6f);
@@ -45,6 +49,8 @@ class $modify(TimeProgressPlayLayer, PlayLayer) {
             label->setPosition({ winSize.width / 2.f, winSize.height - 22.f });
             this->addChild(label, 100);
         }
+
+        parent->addChild(label, 100);
 
         m_fields->timeLabel = label;
     }
