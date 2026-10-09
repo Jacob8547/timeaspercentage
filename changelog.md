@@ -1,3 +1,6 @@
+# 1.0.3
+- Fix for some completion times being wrong
+
 # 1.0.2
 - Removed adding the label to two parents (now only adds to one)
 
