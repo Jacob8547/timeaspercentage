@@ -13,5 +13,17 @@
 	"description": "Displays attempt playtime v.s. total completion time.",
 	"dependencies": {
 		"geode.node-ids": ">=v1.23.3"
+	},
+	"settings": {
+		"title": {
+			"type": "title",
+			"name": "Time As Percentage"
+		},
+		"countdown-time": {
+			"type": "bool",
+			"name": "Countdown Time",
+			"description": "Makes the timer count down instead of up! (How much time is left in the level.)",
+			"default": false
+		}
 	}
 }

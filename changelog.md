@@ -1,5 +1,7 @@
 # 1.0.3
-- Fix for some completion times being wrong
+- Fixed a bug that made completion times wrong for some levels
+- Added configuration for a new "countdown" mode.
+- New logo!
 
 # 1.0.2
 - Removed adding the label to two parents (now only adds to one)

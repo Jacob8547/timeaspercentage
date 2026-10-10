@@ -17,7 +17,7 @@ class $modify(TimeProgressPlayLayer, PlayLayer)
 {
     struct Fields
     {
-        CCLabelBMFont *timeLabel = nullptr;
+        geode::Label *timeLabel = nullptr;
         float totalTime = -1.f;
     };
 
@@ -31,7 +31,7 @@ class $modify(TimeProgressPlayLayer, PlayLayer)
             return;
 
         // Create new label for text
-        auto label = CCLabelBMFont::create("0:00 / 0:00", "bigFont.fnt");
+        auto label = geode::Label::create("0:00 / 0:00", "bigFont.fnt");
         label->setID("time-progress-label"_spr);
 
         // Get percentage label
@@ -97,7 +97,17 @@ class $modify(TimeProgressPlayLayer, PlayLayer)
         float current = this->timeForPos(m_player1->getPosition(), 0, 0, true, 0);
         current = std::min(current, m_fields->totalTime);
 
-        label->setString(
-            fmt::format("{} / {}", formatTime(current), formatTime(m_fields->totalTime)).c_str());
+        bool countdown = Mod::get()->getSettingValue<bool>("countdown-time");
+        if (countdown)
+        {
+
+            label->setString(
+                fmt::format("{} left", formatTime(m_fields->totalTime - current)).c_str());
+        }
+        else
+        {
+            label->setString(
+                fmt::format("{} / {}", formatTime(current), formatTime(m_fields->totalTime)).c_str());
+        }
     }
 };
