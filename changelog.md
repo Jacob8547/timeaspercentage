@@ -1,3 +1,6 @@
+# 1.0.4
+- Support for Geode 6.x and Geometry Dash 2.2091
+
 # 1.0.3
 - Fixed a bug that made completion times wrong for some levels
 - Added configuration for a new "countdown" mode.
